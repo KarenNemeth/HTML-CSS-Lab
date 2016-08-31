@@ -1,3 +1,4 @@
+
 #header {
     background-color: white;
     z-index: 1;
@@ -35,8 +36,40 @@
     height: 100%;
     position: absolute;
     background-color: black;
-    z-index: 10;
     top: 0;
     bottom: 0;
     opacity: 0.25;
+    vertical-align: baseline;
+}
+
+#introtext {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-20%);
+
+}
+
+#welcome {
+    font-style: italic;
+    font-family: serif;
+    font-weight: normal;
+    color: white;
+}
+#button {
+    color: chocolate;
+    font-size: 1.5em;
+    display: inline-block;
+    background-color: gold;
+    border: 2px solid chocolate;
+    border-radius: 3em;
+    height: 30px;
+    width: 200px;
+    margin-top: -10px;
+    padding-top: 1.5px
+}
+
+#body {
+    background-color: grey;
 }
