@@ -1,23 +1,28 @@
+body {
+    margin: 0;
+    flex-direction: column;
+}
 
 #header {
     background-color: white;
     z-index: 1;
+    margin-top: 7px;
 }
 
 #logo {
     float: left;
-    height:50px;
+    height:30px;
     width: auto;
     padding-bottom: 10px;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 #hamburger {
     float: right;
-    height: 30px;
+    height: 20px;
     width: auto;
-    padding-top: 10px;
-    padding-right: 20px;
+    padding-top: 3px;
+    padding-right: 25px;
 }
 
 #intro {
@@ -71,5 +76,45 @@
 }
 
 #body {
+    background-color: lightgrey;
+    position: relative;
+    height:auto;
+    width: auto;
+}
+
+.description {
+    border: 5px solid blue;
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 300px;
+}
+
+.img {
+    max-height: 35px;
+    width: auto;
+    display: inline-flex;
+}
+
+.ttext {
+    clear:left;
+    display: inline;
+    word-wrap: normal;
+
+}
+
+.1 {
+    font-weight: bold;
+}
+
+
+#footer {
     background-color: grey;
+    position: relative;
+    height: 25px;
+    width: auto;
+    color: white;
+    font-size: 10px;
+    padding-top: 10px;
+    padding-left: 25px;
 }
