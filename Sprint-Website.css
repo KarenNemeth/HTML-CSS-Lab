@@ -80,19 +80,6 @@ body {
     padding-top: 1.5px
 }
 
-@media screen and (max-width: 500px){
-    #introtext {
-        color: white;
-        font-size: 75%;
-    }
-
-    #button {
-        width: 120px;
-        height: 25px;
-        transform: scale(50%);
-    }
-}
-
 #body {
     background-color: lightgrey;
     position: relative;
@@ -134,4 +121,56 @@ figure img {
     font-size: 0.75em;
     padding-top: 1.3em;
     padding-left: 1.5em;
+}
+
+@media screen and (max-width: 500px){
+    #introtext {
+        font-size: 75%;
+    }
+
+    #button {
+        width: 120px;
+        height: 25px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    #logo {
+        height: 3.5em;
+        padding-left: 2em;
+        padding-bottom: 0.6em;
+    }
+
+    #hamburger {
+        height: 2.5em;
+        padding-right: 2em;
+        padding-top: 0.6em;
+    }
+
+    #introtext {
+        font-size: 200%;
+    }
+
+    #button {
+        width: 400px;
+        height: 60px;
+    }
+
+    #description {
+        max-width: 1500px;
+    }
+
+    .description {
+        max-width: 600px;
+        display: flex;
+        word-wrap: normal;
+        font-size: 125%;
+    }
+
+    figure img {
+        height: 60px;
+        width: 60px;
+        margin-right: -1em;
+        margin-left: -1em;
+    }
 }
