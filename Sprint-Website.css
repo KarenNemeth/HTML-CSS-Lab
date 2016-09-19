@@ -1,12 +1,73 @@
 body {
     margin: 0;
+    overflow-x: hidden;
 }
-
+#modal {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#darken {
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    opacity: 0.5;
+    background-color: black;
+    position: fixed;
+}
+#contents {
+    width: 55%;
+    height: 40%;
+    z-index: 150;
+    position: fixed;
+    background-color: white;
+    padding: 2%;
+    text-align: center;
+}
+#mailingListContainer{
+    position: relative;
+    margin: 1.5em;
+}
+.mailingListInput{
+    width: 100%;
+    height: 2.5em;
+    margin: 0.5em;
+    text-indent: 1em;
+    font-size: 0.75em;
+    box-sizing: border-box;
+}
+#submitMailingList{
+    margin-top: 1.5em;
+    background-color:#768d87;
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+    border-radius:5px;
+	border:1px solid #566963;
+	cursor:pointer;
+	color:#ffffff;
+    font-size: 0.9em;
+}
+#submitMailingList:hover{
+    background-color:#6c7c7c;
+}
+.closeButton {
+    float: right;
+    margin-bottom: 1em;
+    font-size: 1em;
+    background-color: transparent;
+    border: none;
+    padding: auto;
+}
 #header {
     background-color: white;
     margin-top: 0.5em;
+    height: 2.6em;
 }
-
 #logo {
     float: left;
     height: 2em;
@@ -14,7 +75,6 @@ body {
     padding-left: 2em;
     padding-bottom: 0.6em;
 }
-
 #hamburger {
     float: right;
     height: 1.4em;
@@ -22,7 +82,42 @@ body {
     padding-right: 2em;
     padding-top: 0.4em;
 }
-
+.navigationMenu {
+    background-color: white;
+    width: 20%;
+    min-width: 150px;
+    height: 100%;
+    position: fixed;
+    padding-right: 1em;
+    z-index: 100;
+    top: 0px;
+    right: -220px;
+}
+#navigationMenuOpen {
+    transform: translateX(-220px);
+    transition: transform 0.5s ease-in-out;
+}
+#navigationMenuClose {
+    transform: translateX(200px);
+    transition: transform 0.5s ease-in-out;
+}
+#menuItems {
+    display: block;
+    margin-top: 1em;
+    margin-left: 1.5em;
+}
+.navigationLink {
+    float: left;
+    font-size: 1.5em;
+    color: blue;
+    text-decoration: none;
+    width: 100%;
+    margin-top: 0.7em;
+}
+#logOut {
+    font-size: 1em;
+    margin-top: 2.5em;
+}
 #intro {
     background-image: url("images/building.jpg");
     background-repeat: no-repeat;
@@ -32,7 +127,6 @@ body {
     padding-top: 59%;
     position: relative;
 }
-
 #transparency {
     width: 100%;
     height: 100%;

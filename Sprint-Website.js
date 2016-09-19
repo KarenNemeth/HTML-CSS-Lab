@@ -1,25 +1,31 @@
-(function() {
-    /*To have a good height on navigationMenu
-    var heightHeaderAndIntro = document.getElementById("header").height + document.getElementById("intro").height;
-    document.getElementsByClass("navigationMenu").height = heightHeaderAndIntro;*/
+$(document).ready(function() {
 
-    var hamburger = document.getElementById("hamburger");
-    var navigationMenu = document.getElementsByClassName("navigationMenu");
-    var closeNavigation = document.getElementsByClassName("closeNavigation");
+    $('button').first().on("click", function(){
+        $('#modal').css({display: "none"});
+    });
+    $('#submitMailingList').on("click keypress", function(e){
+        if (e.which === 13 || e.type === 'click') {
+            $.post('Sprint-Website-Mailing-List.json');
+        }
+    });
 
-    hamburger.addEventListener("click", openNavigationMenu);
-    closeNavigation[0].addEventListener("click", closeNavigationMenu);
-    document.body.addEventListener("click", function(e)
+    $('.navigationMenu').height(function(){
+        var navigationMenuHeight = ($('#header').outerHeight(true) + $('#container').outerHeight());
+        return navigationMenuHeight;
+    });
+    $("#hamburger").on("click", openNavigationMenu);
+    $("#closeNavigation").on("click", closeNavigationMenu);
+    $('body').on("click", function(e)
         {if (e.target.id !== "navigationMenuOpen") {
             closeNavigationMenu();
         }
     }, true);
 
     function openNavigationMenu() {
-        navigationMenu[0].id = "navigationMenuOpen";
+        $('.navigationMenu').attr('id', 'navigationMenuOpen');
     }
 
     function closeNavigationMenu() {
-        navigationMenu[0].id = "navigationMenuClose";
+        $('.navigationMenu').attr('id', 'navigationMenuClose');
     }
-})();
+});
